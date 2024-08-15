@@ -15,16 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<sonar.host.url>http://localhost:5000</sonar.host.url> <!-- SonarQube server URL -->
-		<sonar.projectKey>springboot</sonar.projectKey> <!-- Project key -->
-		<sonar.projectName>Spring Boot Demo</sonar.projectName> <!-- Project name -->
-		<sonar.projectVersion>1.0</sonar.projectVersion> <!-- Project version -->
-		<sonar.sources>src/main/java</sonar.sources> <!-- Source code directory -->
-		<sonar.tests>src/test/java</sonar.tests> <!-- Test code directory -->
-		<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding> <!-- Encoding -->
-		<sonar.java.binaries>target/classes</sonar.java.binaries> <!-- Binary files location -->
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,24 +35,18 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
-	                <execution>
-	                    <id>repackage</id>
-	                    <goals>
-	                        <goal>repackage</goal>
-	                    </goals>
-	                    <configuration>
-	                        <finalName>Uber</finalName>
-	                    </configuration>
-	                </execution>
-	            </executions>
-			</plugin>
-			
-			<!-- SonarQube Maven Plugin -->
-			<plugin>
-				<groupId>org.sonarsource.scanner.maven</groupId>
-				<artifactId>sonar-maven-plugin</artifactId>
-				<version>3.9.1.2184</version> <!-- Update to the latest version -->
+                <execution>
+                    <id>repackage</id>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                    <configuration>
+                        <finalName>Uber</finalName>
+                    </configuration>
+                </execution>
+            </executions>
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
